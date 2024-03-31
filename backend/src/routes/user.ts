@@ -40,6 +40,7 @@ userRouter.post("/signup", async (c) => {
     return c.json(jwt)
   } catch (e) {
     c.status(403)
+    console.log(e)
     return c.json({ error: "Invalid" })
   }
 })
